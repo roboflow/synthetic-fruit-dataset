@@ -11,7 +11,6 @@ const _ = require('lodash');
 
 // drawing utilities
 const { createCanvas, loadImage, CanvasRenderingContext2D } = require('canvas');
-// because this was originally for the browser it expects this in the global scope
 const floodfill = require('@roboflow/floodfill')(CanvasRenderingContext2D);
 
 // for writing annotations
