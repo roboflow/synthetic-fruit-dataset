@@ -12,8 +12,7 @@ const _ = require('lodash');
 // drawing utilities
 const { createCanvas, loadImage, CanvasRenderingContext2D } = require('canvas');
 // because this was originally for the browser it expects this in the global scope
-global.CanvasRenderingContext2D = CanvasRenderingContext2D;
-const floodfill = require('/Users/yeldarb/Code/floodfill.js')(CanvasRenderingContext2D);
+const floodfill = require('@roboflow/floodfill')(CanvasRenderingContext2D);
 
 // for writing annotations
 var Handlebars = require('handlebars');
