@@ -54,15 +54,26 @@ var classes = _.map(folders, function(folder) {
 const OBJECTS = {};
 _.each(folders, function(folder, i) {
     var cls = classes[i]; // get the class name
-    OBJECTS[cls] = _.filter(fs.readdirSync(path.join(FRUITS, folder)), function(filename) {
+
+    var objs = [];
+    objs = _.filter(fs.readdirSync(path.join(FRUITS, folder)), function(filename) {
         // only grab jpg images
         return filename.match(/\.jpe?g/);
     });
 
-    OBJECTS[cls] = _.map(OBJECTS[cls], function(image) {
+    objs = _.map(objs, function(image) {
         // we need to know which folder this came from
         return path.join(folder, image);
     });
+    
+    if(!OBJECTS[cls]) {
+        OBJECTS[cls] = objs;
+    } else {
+        // append to existing images
+        _.each(objs, function(obj) {
+            OBJECTS[cls].push(obj);
+        });
+    }
 });
 // when we randomly select a class, we want them equally weighted
 classes = _.uniq(classes);
