@@ -35,7 +35,7 @@ const OUTPUT_DIR = path.join(__dirname, "output");
 
 // location of jpgs on your filesystem (validation set from here: https://www.figure-eight.com/dataset/open-images-annotated-with-bounding-boxes/)
 const OPEN_IMAGES = path.join(os.homedir(), "OpenImages");
-// text file good candidate images (I selected these for size & no fruit content)
+// text file of good candidate images (I selected these for size & no fruit content)
 const BACKGROUNDS = fs.readFileSync(__dirname + "/OpenImages.filtered.txt", "utf-8").split("\n");
 
 // location of folders containing jpgs on your filesystem (clone from here: https://github.com/Horea94/Fruit-Images-Dataset)
