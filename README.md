@@ -1,9 +1,10 @@
 # Synthetic Fruit Dataset
 
-Code for Roboflow's [How to Create a Synthetic Dataset tutorial](https://blog.roboflow.ai/how-to-create-a-synthetic-dataset-for-computer-vision).
+Code for Roboflow's [How to Create a Synthetic Dataset for Computer Vision tutorial](https://blog.roboflow.ai/how-to-create-a-synthetic-dataset-for-computer-vision).
 
 After downloading Open Images and Fruit images and storing them in your home
-directory, running `generate.js` will generate synthetic images like these:
+directory, running `generate.js` will generate synthetic images labeled with
+bounding boxes for object detection like these:
 
 ![Example Images](https://blog.roboflow.ai/content/images/2020/04/synthetic-fruit-examples.jpg)
 
