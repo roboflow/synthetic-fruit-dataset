@@ -214,12 +214,13 @@ const addRandomObject = function(canvas, context, cb) {
         context.restore();
 
         // return the type and bounds of the object we placed
+        // VOC XML's top-left pixel is 1,1
         cb({
             cls: cls,
-            xmin: Math.floor(x),
-            xmax: Math.ceil(x + w),
-            ymin: Math.floor(y),
-            ymax: Math.ceil(y + h)
+            xmin: Math.floor(x)+1,
+            xmax: Math.ceil(x + w)+1,
+            ymin: Math.floor(y)+1,
+            ymax: Math.ceil(y + h)+1
         });
     });
 };
